@@ -54,13 +54,24 @@
 
       async function shareMsg() {}
 
-      function logOut() {}
+      function logOut() {
 
-      function closed() {}
+      }
 
-      async function scanCode() {}
+      function closed() {
 
-      function openWindow() {}
+      }
+
+      async function scanCode() {
+
+      }
+
+      function openWindow() {
+        liff.openWindow({
+          url: "https://line.me",
+          external: true
+        })
+      }
 
       async function getFriendship() {
         const friend = await liff.getFriendship()

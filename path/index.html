@@ -30,14 +30,16 @@
         document.getElementById("userId").append(profile.userId);
         document.getElementById("statusMessage").append(profile.statusMessage);
         document.getElementById("displayName").append(profile.displayName);
+
         document
           .getElementById("decodedIDToken")
           .append(liff.getDecodedIDToken().email);
-      }
+    }
+
     async function main(){
       await liff.init({liffId: "1656033600-Bwm23aQn"})
       if(liff.isLoggedIn()){
-        getUserProfile()
+        getUserProfile();
       } else{
         liff.login({ redirectUri: "https://sirawitpai.github.io/Liff-Sabunnga/path"})
       }

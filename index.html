@@ -6,8 +6,13 @@
       name="viewport"
       content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
     />
+    
     <title>My LIFF app</title>
     <link rel="stylesheet" href="css/style.css" media="all" />
+    <!-- <script>
+      document.write('<link rel="stylesheet" href="css/style.css?cache=' + new Date().getTime() + '">')
+    </script> -->
+
   </head>
   <body>
     <p id="os"><b>OS:</b></p>
@@ -45,10 +50,7 @@
     <button id="btnClose" onclick="closed()">Close</button>
 
   <script src="js/vconsole.min.js"></script>
-  <script>
-    var vConsole = new VConsole()
-    console.log("Hello World!")
-  </script> 
+
 
     <scrip src="https://static.line-scdn.net/liff/edge/2/sdk.js"></scrip>
     <script>
@@ -69,6 +71,7 @@
             "text": "This message waas sent by ShareTargetPicker"
           }
         ])
+        liff.closeWindow()
       }
 
       function logOut() {

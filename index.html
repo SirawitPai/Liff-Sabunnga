@@ -55,7 +55,10 @@
 
       function closed() {}
 
-      async function scanCode() {}
+      async function scanCode() {
+        const result = await liff.scanCode()
+        document.getElementById("scanCode").append(result.value)
+      }
 
       function openWindow() {
         liff.openWindow({
@@ -79,8 +82,8 @@
           await liff.sendMessages([
             {
               "type": "sticker",
-              "stickerId": 52002735,
-              "packageId": 11537
+              "packageId": "11537",
+              "stickerId": "52002735"
             }
           ]);
           alert("Message Sent");

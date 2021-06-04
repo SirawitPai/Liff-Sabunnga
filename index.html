@@ -6,85 +6,121 @@
       name="viewport"
       content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
     />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>LIFF Sabunnga</title>
     <link rel="stylesheet" href="css/style.css" media="all" />
   </head>
-  <body>
-    <div class="container">
-  <h1>My First Bootstrap Page</h1>
-  <p>This is some text.</p>
-</div>
-    <p id="os"><b>OS:</b></p>
-    <p id="language"><b>Language:</b></p>
-    <p id="version"><b>Version:</b></p>
-    <p id="isInClient"><b>isInClient:</b></p>
-    <p id="accessToken"><b>AccessToken:</b></p>
+  <body class="bg">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <img src="img/bg.jpg" alt="" width="1500" height="700" />
+        </div>
+        <div class="col-sm-12">
+          <div class="text-center">
+            <h2>กรุณาเลือกหัวข้อเลือกในการแสดงรายการดอกไม้</h2>
+            <p>ในการเลือกบอทจะช่วยให้่สินค้าตรงตามที่ลูกค้าเลือกมากที่สุด</p>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                  <form>
+                    <select name="cars" class="custom-select mb-3">
+                      <option selected>หัวข้อหลักในการเลือก</option>
+                      <option value="รูปแบบการจัด">รูปแบบการจัด</option>
+                      <option value="สีดอกไม้">สีดอกไม้</option>
+                      <option value="ความหมายดอกไม้">ความหมายดอกไม้</option>
+                      <option value="วันสำคัญ">วันสำคัญ</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+                <div class="col-4"></div>
+              </div>
+            </div>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+      <p id="os"><b>OS:</b></p>
+      <p id="language"><b>Language:</b></p>
+      <p id="version"><b>Version:</b></p>
+      <p id="isInClient"><b>isInClient:</b></p>
+      <p id="accessToken"><b>AccessToken:</b></p>
 
-    <img id="pictureUrl" />
-    <p id="userId"><b>userId:</b></p>
-    <p id="displayName"><b>displayName:</b></p>
-    <p id="statusMessage"><b>statusMessage:</b></p>
-    <p id="decodedIDToken"><b>email:</b></p>
+      <img id="pictureUrl" />
+      <p id="userId"><b>userId:</b></p>
+      <p id="displayName"><b>displayName:</b></p>
+      <p id="statusMessage"><b>statusMessage:</b></p>
+      <p id="decodedIDToken"><b>email:</b></p>
 
-    <p id="type"><b>type:</b></p>
-    <p id="viewType"><b>viewType:</b></p>
-    <p id="utouId"><b>utouId:</b></p>
-    <p id="roomId"><b>roomId:</b></p>
-    <p id="groupId"><b>groupId:</b></p>
+      <p id="type"><b>type:</b></p>
+      <p id="viewType"><b>viewType:</b></p>
+      <p id="utouId"><b>utouId:</b></p>
+      <p id="roomId"><b>roomId:</b></p>
+      <p id="groupId"><b>groupId:</b></p>
 
-    <p id="friendship"><b>isFriendship:</b></p>
-    <p id="scanCode"><b>Code:</b></p>
-    <p id="isLoggedIn"><b>isLoggedIn:</b></p>
+      <p id="friendship"><b>isFriendship:</b></p>
+      <p id="scanCode"><b>Code:</b></p>
+      <p id="isLoggedIn"><b>isLoggedIn:</b></p>
 
-    <p id="universalLink1"><b>Universal Link:</b></p>
-    <p id="universalLink2"><b>Universal Link with Query params:</b></p>
-    <p><a href="https://sirawitpai.github.io/Liff-Sabunnga/path/?param=1">Link to Path</a></p>
+      <p id="universalLink1"><b>Universal Link:</b></p>
+      <p id="universalLink2"><b>Universal Link with Query params:</b></p>
+      <p>
+        <a href="https://sirawitpai.github.io/Liff-Sabunnga/path/?param=1"
+          >Link to Path</a
+        >
+      </p>
 
-    <button id="btnMsg" onclick="sendMsg()">Send Message</button>
-    <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
-    <button onclick="openWindow()">Open Window</button>
-    <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
-    <button id="btnLogOut" onclick="logOut()">Log Out</button>
-    <button id="btnClose" onclick="Closed()">Close</button>
-
+      <button id="btnMsg" onclick="sendMsg()">Send Message</button>
+      <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
+      <button onclick="openWindow()">Open Window</button>
+      <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
+      <button id="btnLogOut" onclick="logOut()">Log Out</button>
+      <button id="btnClose" onclick="Closed()">Close</button>
+    </div>
     <script src="js/vconsole.min.js"></script>
     <script>
-    var vConsole = new VConsole()
-    console.log("Hello World!");
+      var vConsole = new VConsole();
+      console.log("Hello World!");
     </script>
 
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
       function createUniversalLink() {
-        const link1 = liff.permanentLink.createUrl()
-      document.getElementById("universalLink1").append(link1)
+        const link1 = liff.permanentLink.createUrl();
+        document.getElementById("universalLink1").append(link1);
 
-      liff.permanentLink.setExtraQueryParam('param=9')
-      const link2 = liff.permanentLink.createUrl()
-      document.getElementById("universalLink2").append(link2)
-    }
-
-    async function shareMsg() {
-      await liff.shareTargetPicker([
-        {
-          type: "text",
-          text: "This message was sent by ShareTargetPicker"
-        }
-      ])
+        liff.permanentLink.setExtraQueryParam("param=9");
+        const link2 = liff.permanentLink.createUrl();
+        document.getElementById("universalLink2").append(link2);
       }
 
       async function shareMsg() {
         await liff.shareTargetPicker([
           {
-            "type": "text",
-            "text": "This message waas sent by ShareTargetPicker"
-          }
-        ])
-        liff.closeWindow()
+            type: "text",
+            text: "This message was sent by ShareTargetPicker",
+          },
+        ]);
+      }
+
+      async function shareMsg() {
+        await liff.shareTargetPicker([
+          {
+            type: "text",
+            text: "This message waas sent by ShareTargetPicker",
+          },
+        ]);
+        liff.closeWindow();
       }
 
       function logOut() {
@@ -125,14 +161,14 @@
         ) {
           await liff.sendMessages([
             {
-              "type": "text",
-              "text": "สวัสดีครับการแชร์ข้อความ"
+              type: "text",
+              text: "สวัสดีครับการแชร์ข้อความ",
             },
             {
-              "type": "sticker",
-              "packageId": "11537",
-              "stickerId": "52002735"
-            }
+              type: "sticker",
+              packageId: "11537",
+              stickerId: "52002735",
+            },
           ]);
           alert("Message Sent");
         }
@@ -176,20 +212,18 @@
 
       async function main() {
         liff.ready.then(() => {
-          document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-        if(liff.isLoggedIn()){
-          getEnvironment();
-          getUserProfile();
-          getContext();
-          getFriendship();
-          createUniversalLink();
-        }
-        else{
-          liff.login()
-        }
-        }) 
+          document.getElementById("isLoggedIn").append(liff.isLoggedIn());
+          if (liff.isLoggedIn()) {
+            getEnvironment();
+            getUserProfile();
+            getContext();
+            getFriendship();
+            createUniversalLink();
+          } else {
+            liff.login();
+          }
+        });
         await liff.init({ liffId: "1656033600-Bwm23aQn" });
-        
       }
       main();
     </script>

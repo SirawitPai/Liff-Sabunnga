@@ -43,11 +43,12 @@
     <button id="btnLogOut" onclick="logOut()">Log Out</button>
     <button id="btnClose" onclick="Closed()">Close</button>
 
-    <!-- <script src="js/vconsole.min.js"></script> -->
-    <!-- <script>
+    <script src="js/vconsole.min.js"></script>
+    <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
-  </script> -->
+    errorPlease();
+  </script>
 
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
@@ -177,7 +178,7 @@
           createUniversalLink();
         }
         else{
-          // liff.login()
+          liff.login()
         }
         }) 
         await liff.init({ liffId: "1656033600-Bwm23aQn" });

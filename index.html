@@ -341,7 +341,7 @@
         await liff.shareTargetPicker([
           {
             type: "text",
-            text: "This message waas sent by ShareTargetPicker",
+            text: "This message waas sent by ShareTargetPicker"
           },
         ]);
         liff.closeWindow();
@@ -389,91 +389,9 @@
               text: "สวัสดีครับการแชร์ข้อความ",
             },
             {
-              type: "template",
-              altText: "this is a carousel template",
-              template: {
-                type: "carousel",
-                columns: [
-                  {
-                    thumbnailImageUrl:
-                      "https://www.ladyissue.com/wp-content/uploads/2016/11/FWFLV1.1.jpg",
-                    title: "ดอกไฮยาซินท์ ",
-                    text: "รักที่มั่นคงที่มีต่อคนๆ นั้น ไม่เคยเปลี่ยนแปลงนั้นเองค่า",
-                    actions: [
-                      {
-                        type: "message",
-                        label: "เลือก",
-                        text: "ดอกไฮยาซินท์ ",
-                      },
-                    ],
-                  },
-                  {
-                    thumbnailImageUrl:
-                      "https://www.ladyissue.com/wp-content/uploads/2016/11/FWFLV3.jpg",
-                    title: "ดอกคาร์เนชั่นสีชมพู",
-                    text: "เหมาะกับคนที่เพิ่งเริ่มคบกันใหม่ๆ เพราะความหวานที่ดูสดชื่น",
-                    actions: [
-                      {
-                        type: "message",
-                        label: "เลือก",
-                        text: "ดอกคาร์เนชั่นสีชมพู",
-                      },
-                    ],
-                  },
-                  {
-                    thumbnailImageUrl:
-                      "https://www.ladyissue.com/wp-content/uploads/2016/11/FWFLV4.jpg",
-                    title: "ดอกทิวลิปสีแดง",
-                    text: "ความรักที่จริงใจ และเปิดเผย เหมาะจะซื้อเอาไปสารภาพรักกับใคร ",
-                    actions: [
-                      {
-                        type: "message",
-                        label: "เลือก",
-                        text: "ดอกทิวลิปสีแดง",
-                      },
-                    ],
-                  },
-                  {
-                    thumbnailImageUrl:
-                      "https://www.ladyissue.com/wp-content/uploads/2016/11/FWFLV8.jpg",
-                    title: "ดอกเดซี่สีขาว",
-                    text: "ความไร้เดียงสาและซื่อสัตย์กับความรัก และรักโดยบริสุทธิ์ ",
-                    actions: [
-                      {
-                        type: "message",
-                        label: "เลือก",
-                        text: "ดอกเดซี่สีขาว",
-                      },
-                    ],
-                  },
-                  {
-                    thumbnailImageUrl:
-                      "https://spcdn.springnews.co.th/wp-content/uploads/2019/02/iStock-915203832.jpg",
-                    title: "ดอกกุหลาบ",
-                    text: "ความเร่าร้อน ร้อนแรง แต่ยังแฝงไปด้วยความปรารถนาดี ความห่วงใย",
-                    actions: [
-                      {
-                        type: "message",
-                        label: "เลือก",
-                        text: "ดอกกุหลาบ",
-                      },
-                    ],
-                  },
-                  {
-                    thumbnailImageUrl:
-                      "https://spcdn.springnews.co.th/wp-content/uploads/2019/02/iStock-915203832.jpg",
-                    title: "Title",
-                    text: "Text",
-                    actions: [
-                      {
-                        type: "message",
-                        label: "Action 1",
-                        text: "Action 1",
-                      },
-                    ],
-                  },
-                ],
-              },
+              type: "sticker",
+              packageId: "11537",
+              stickerId: "52002735",
             },
           ]);
           alert("Message Sent");

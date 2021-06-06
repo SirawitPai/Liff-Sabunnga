@@ -13,43 +13,185 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
     <title>LIFF Sabunnga</title>
     <link rel="stylesheet" href="css/style.css" media="all" />
   </head>
   <body class="bg">
-    <div class="container-fluid">
+    <!-- Start Container -->
+    <!-- <div style="background-image: url('./img/bg.jpg');"></div> -->
+    <img src="img/bg.jpg" alt="" width="100%" height="100%" />
+
+    <div class="container">
+      <!-- Start Header Content -->
       <div class="row">
-        <div class="col-sm-12">
-          <img src="img/bg.jpg" alt="" width="1500" height="700" />
-        </div>
-        <div class="col-sm-12">
-          <div class="text-center">
-            <h2>กรุณาเลือกหัวข้อเลือกในการแสดงรายการดอกไม้</h2>
-            <p>ในการเลือกบอทจะช่วยให้่สินค้าตรงตามที่ลูกค้าเลือกมากที่สุด</p>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
-                  <form>
-                    <select name="cars" class="custom-select mb-3">
-                      <option selected>หัวข้อหลักในการเลือก</option>
-                      <option value="รูปแบบการจัด">รูปแบบการจัด</option>
-                      <option value="สีดอกไม้">สีดอกไม้</option>
-                      <option value="ความหมายดอกไม้">ความหมายดอกไม้</option>
-                      <option value="วันสำคัญ">วันสำคัญ</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary">
-                      Submit
-                    </button>
-                  </form>
-                </div>
-                <div class="col-4"></div>
-              </div>
-            </div>
-            <br /><br />
-          </div>
+        <div class="col s12 text-center">
+          <h4>กรุณาเลือกหัวข้อในการแสดงรายการสินค้าดอกไม้</h4>
+          <p>ในการเลือกบอทจะช่วยให้่สินค้าตรงตามที่ลูกค้าเลือกมากที่สุด</p>
         </div>
       </div>
+
+      <div class="row">
+        <form id="carForm" class="col s12">
+          <div class="form-group">
+            <!-- <label><h6>เลือกประเภทของการคัดสินค้าดอกไม้แต่ละหมวดหมู่</h6></label> -->
+            <label for="email">หัวข้อการคัดสินค้าดอกไม้:</label>
+            <select
+              class="form-control"
+              id="topic"
+              name="sellist1"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>
+                กรุณาหัวข้อการคัดดอกไม้
+              </option>
+              <option value="รูปแบบการจัด">รูปแบบการจัด</option>
+              <option value="สีดอกไม้">สีดอกไม้</option>
+              <option value="ความหมายดอกไม้">ความหมายดอกไม้</option>
+              <option value="วันสำคัญ">วันสำคัญ</option>
+              <option value="ทั้งหมด">ทั้งหมด</option>
+            </select>
+            <br />
+            <select
+              class="form-control"
+              id="flowerarrangement"
+              name="sellist2"
+              style="display: none"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>รูปแบบการจัดดอกไม้</option>
+              <option value="ช่อดอกไม้">ช่อดอกไม้</option>
+              <option value="แจกัน">แจกัน</option>
+              <option value="พวงหลีด">พวงหลีด</option>
+              <option value="ทั้งหมด">ทั้งหมด</option>
+            </select>
+            <br />
+            <select
+              class="form-control"
+              id="flowercolor"
+              name="sellist3"
+              style="display: none"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>เลือกสีดอกไม้</option>
+              <option value="สีขาว">สีขาว</option>
+              <option value="สีแดง">สีแดง</option>
+              <option value="สีเหลือง">สีเหลือง</option>
+              <option value="สีชมพู">สีชมพู</option>
+              <option value="ทั้งหมด">ทั้งหมด</option>
+            </select>
+            <br />
+            <select
+              class="form-control"
+              id="flowermeaning"
+              name="sellist4"
+              style="display: none"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>เลือกความหมายดอกไม้</option>
+              <option value="ความรัก">ความรัก</option>
+              <option value="คำยินดี">คำยินดี</option>
+              <option value="ความหวัง">ความหวัง</option>
+              <option value="ทั้งหมด">ทั้งหมด</option>
+            </select>
+            <br />
+            <select
+              class="form-control"
+              id="bigday"
+              name="sellist5"
+              style="display: none"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>เลือกวันสำคัญ</option>
+              <option value="วันเกิด">วันเกิด</option>
+              <option value="วันครบรอบ">วันครบรอบ</option>
+              <option value="วันรับปริณญา">วันรับปริณญา</option>
+              <option value="งานศพ">งานศพ</option>
+              <option value="ทั้งหมด">ทั้งหมด</option>
+            </select>
+            <br />
+            <select
+              class="form-control"
+              id="bouquetsize"
+              name="sellist6"
+              style="display: none"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>ขนาดช่อดอกไม้</option>
+              <option value="เล็ก">เล็ก</option>
+              <option value="กลาง">กลาง</option>
+              <option value="ใหญ่">ใหญ่</option>
+              <option value="ทั้งหมด">ทั้งหมด</option>
+            </select>
+            <br />
+            <select
+              class="form-control"
+              id="flowervase"
+              name="sellist6"
+              style="display: none"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>รูปแบบแจกัน</option>
+              <option value="รูปแบบการจัด">ยาว</option>
+              <option value="สีดอกไม้">กลม</option>
+              <option value="วันสำคัญ">ทั้งหมด</option>
+            </select>
+            <br />
+            <select
+              class="form-control"
+              id="wreathpattern"
+              name="sellist6"
+              style="display: none"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>รูปแบบพวงหลีด</option>
+              <option value="รูปแบบการจัด">กลม</option>
+              <option value="สีดอกไม้">เหลี่ยม</option>
+              <option value="วันสำคัญ">ทั้งหมด</option>
+            </select>
+            <br />
+            <select
+              class="form-control"
+              id="flowers"
+              name="sellist6"
+              style="display: none"
+              onchange="topictype()"
+            >
+              <option value="" disabled selected>เลือกดอกไม้</option>
+              <option value="กุหลาบ">กุหลาบ</option>
+              <option value="ดอกคัตเตอร์">ดอกคัตเตอร์</option>
+              <option value="ดอกคาร์เนชั่น">ดอกคาร์เนชั่น</option>
+              <option value="ดอกทานตะวัน">ดอกทานตะวัน</option>
+              <option value="ดอกทิวลิป">ดอกทิวลิป</option>
+              <option value="ทั้งหมด">ทั้งหมด</option>
+            </select>
+            <br />
+
+            <button type="button" class="btn btn-primary"  onclick=" shareProducts()">
+              คลิกส่งข้อมูลสินค้า
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container-fluid">
       <p id="os"><b>OS:</b></p>
       <p id="language"><b>Language:</b></p>
       <p id="version"><b>Version:</b></p>
@@ -94,7 +236,98 @@
     </script>
 
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
     <script>
+      async function topictype() {
+        const topice = document.getElementById("topic").value;
+        if (topice == "รูปแบบการจัด") {
+          document.getElementById("flowerarrangement").style.display = "block";
+
+          document.getElementById("flowercolor").style.display = "none";
+          document.getElementById("flowermeaning").style.display = "none";
+          document.getElementById("bigday").style.display = "none";
+
+          var flowerarrangement =
+            document.getElementById("flowerarrangement").value;
+
+          if (flowerarrangement == "ช่อดอกไม้") {
+            document.getElementById("bouquetsize").style.display = "block";
+            var bouquetsize = document.getElementById("bouquetsize").value;
+
+            if (bouquetsize == "" || bouquetsize == "ทั้งหมด") {
+              document.getElementById("flowers").style.display = "none";
+            } else {
+              document.getElementById("flowers").style.display = "block";
+            }
+
+            document.getElementById("flowervase").style.display = "none";
+            document.getElementById("wreathpattern").style.display = "none";
+          } else if (flowerarrangement == "แจกัน") {
+            document.getElementById("flowervase").style.display = "block";
+
+            document.getElementById("wreathpattern").style.display = "none";
+            document.getElementById("bouquetsize").style.display = "none";
+          } else if (flowerarrangement == "พวงหลีด") {
+            document.getElementById("wreathpattern").style.display = "block";
+
+            document.getElementById("flowervase").style.display = "none";
+            document.getElementById("bouquetsize").style.display = "none";
+          } else {
+            document.getElementById("wreathpattern").style.display = "none";
+            document.getElementById("flowervase").style.display = "none";
+            document.getElementById("bouquetsize").style.display = "none";
+          }
+        } else if (topice == "สีดอกไม้") {
+          document.getElementById("flowercolor").style.display = "block";
+
+          document.getElementById("flowerarrangement").style.display = "none";
+          document.getElementById("flowermeaning").style.display = "none";
+          document.getElementById("bigday").style.display = "none";
+          document.getElementById("bouquetsize").style.display = "none";
+          document.getElementById("flowervase").style.display = "none";
+          document.getElementById("wreathpattern").style.display = "none";
+          document.getElementById("flowers").style.display = "none";
+        } else if (topice == "ความหมายดอกไม้") {
+          document.getElementById("flowermeaning").style.display = "block";
+
+          document.getElementById("flowerarrangement").style.display = "none";
+          document.getElementById("flowercolor").style.display = "none";
+          document.getElementById("bigday").style.display = "none";
+          document.getElementById("bouquetsize").style.display = "none";
+          document.getElementById("flowervase").style.display = "none";
+          document.getElementById("wreathpattern").style.display = "none";
+          document.getElementById("flowers").style.display = "none";
+        } else if (topice == "วันสำคัญ") {
+          document.getElementById("bigday").style.display = "block";
+
+          document.getElementById("flowerarrangement").style.display = "none";
+          document.getElementById("flowercolor").style.display = "none";
+          document.getElementById("flowermeaning").style.display = "none";
+          document.getElementById("bouquetsize").style.display = "none";
+          document.getElementById("flowervase").style.display = "none";
+          document.getElementById("wreathpattern").style.display = "none";
+          document.getElementById("flowers").style.display = "none";
+        } else {
+          document.getElementById("flowerarrangement").style.display = "none";
+          document.getElementById("flowercolor").style.display = "none";
+          document.getElementById("flowermeaning").style.display = "none";
+          document.getElementById("bigday").style.display = "none";
+          document.getElementById("bouquetsize").style.display = "none";
+          document.getElementById("flowervase").style.display = "none";
+          document.getElementById("wreathpattern").style.display = "none";
+          document.getElementById("flowers").style.display = "none";
+        }
+      }
+      async function shareProducts() {
+        await liff.shareTargetPicker([
+          {
+            type: "text",
+            text: topice,
+          },
+        ]);
+        liff.closeWindow();
+      }
+
       function createUniversalLink() {
         const link1 = liff.permanentLink.createUrl();
         document.getElementById("universalLink1").append(link1);
@@ -102,15 +335,6 @@
         liff.permanentLink.setExtraQueryParam("param=9");
         const link2 = liff.permanentLink.createUrl();
         document.getElementById("universalLink2").append(link2);
-      }
-
-      async function shareMsg() {
-        await liff.shareTargetPicker([
-          {
-            type: "text",
-            text: "This message was sent by ShareTargetPicker",
-          },
-        ]);
       }
 
       async function shareMsg() {
@@ -165,9 +389,91 @@
               text: "สวัสดีครับการแชร์ข้อความ",
             },
             {
-              type: "sticker",
-              packageId: "11537",
-              stickerId: "52002735",
+              type: "template",
+              altText: "this is a carousel template",
+              template: {
+                type: "carousel",
+                columns: [
+                  {
+                    thumbnailImageUrl:
+                      "https://www.ladyissue.com/wp-content/uploads/2016/11/FWFLV1.1.jpg",
+                    title: "ดอกไฮยาซินท์ ",
+                    text: "รักที่มั่นคงที่มีต่อคนๆ นั้น ไม่เคยเปลี่ยนแปลงนั้นเองค่า",
+                    actions: [
+                      {
+                        type: "message",
+                        label: "เลือก",
+                        text: "ดอกไฮยาซินท์ ",
+                      },
+                    ],
+                  },
+                  {
+                    thumbnailImageUrl:
+                      "https://www.ladyissue.com/wp-content/uploads/2016/11/FWFLV3.jpg",
+                    title: "ดอกคาร์เนชั่นสีชมพู",
+                    text: "เหมาะกับคนที่เพิ่งเริ่มคบกันใหม่ๆ เพราะความหวานที่ดูสดชื่น",
+                    actions: [
+                      {
+                        type: "message",
+                        label: "เลือก",
+                        text: "ดอกคาร์เนชั่นสีชมพู",
+                      },
+                    ],
+                  },
+                  {
+                    thumbnailImageUrl:
+                      "https://www.ladyissue.com/wp-content/uploads/2016/11/FWFLV4.jpg",
+                    title: "ดอกทิวลิปสีแดง",
+                    text: "ความรักที่จริงใจ และเปิดเผย เหมาะจะซื้อเอาไปสารภาพรักกับใคร ",
+                    actions: [
+                      {
+                        type: "message",
+                        label: "เลือก",
+                        text: "ดอกทิวลิปสีแดง",
+                      },
+                    ],
+                  },
+                  {
+                    thumbnailImageUrl:
+                      "https://www.ladyissue.com/wp-content/uploads/2016/11/FWFLV8.jpg",
+                    title: "ดอกเดซี่สีขาว",
+                    text: "ความไร้เดียงสาและซื่อสัตย์กับความรัก และรักโดยบริสุทธิ์ ",
+                    actions: [
+                      {
+                        type: "message",
+                        label: "เลือก",
+                        text: "ดอกเดซี่สีขาว",
+                      },
+                    ],
+                  },
+                  {
+                    thumbnailImageUrl:
+                      "https://spcdn.springnews.co.th/wp-content/uploads/2019/02/iStock-915203832.jpg",
+                    title: "ดอกกุหลาบ",
+                    text: "ความเร่าร้อน ร้อนแรง แต่ยังแฝงไปด้วยความปรารถนาดี ความห่วงใย",
+                    actions: [
+                      {
+                        type: "message",
+                        label: "เลือก",
+                        text: "ดอกกุหลาบ",
+                      },
+                    ],
+                  },
+                  {
+                    thumbnailImageUrl:
+                      "https://spcdn.springnews.co.th/wp-content/uploads/2019/02/iStock-915203832.jpg",
+                    title: "Title",
+                    text: "Text",
+                    actions: [
+                      {
+                        type: "message",
+                        label: "Action 1",
+                        text: "Action 1",
+                      },
+                    ],
+                  },
+                ],
+              },
             },
           ]);
           alert("Message Sent");

@@ -40,6 +40,7 @@
               class="form-control"
               id="topic"
               name="sellist1"
+              style="margin: 10px"
               onchange="topictype()"
             >
               <option value="" disabled selected>
@@ -55,7 +56,7 @@
               class="form-control"
               id="flowerarrangement"
               name="sellist2"
-              style="display: none"
+              style="display: none ;margin: 10px"
               onchange="topictype()"
             >
               <option value="" disabled selected>รูปแบบการจัดดอกไม้</option>
@@ -69,7 +70,7 @@
               class="form-control"
               id="flowercolor"
               name="sellist3"
-              style="display: none"
+              style="display: none;margin: 10px"
               onchange="topictype()"
             >
               <option value="" disabled selected>เลือกสีดอกไม้</option>
@@ -84,7 +85,7 @@
               class="form-control"
               id="flowermeaning"
               name="sellist4"
-              style="display: none"
+              style="display: none;margin: 10px"
               onchange="topictype()"
             >
               <option value="" disabled selected>เลือกความหมายดอกไม้</option>
@@ -98,7 +99,7 @@
               class="form-control"
               id="bigday"
               name="sellist5"
-              style="display: none"
+              style="display: none;margin: 10px"
               onchange="topictype()"
             >
               <option value="" disabled selected>เลือกวันสำคัญ</option>
@@ -113,7 +114,7 @@
               class="form-control"
               id="bouquetsize"
               name="sellist6"
-              style="display: none"
+              style="display: none;margin: 10px"
               onchange="topictype()"
             >
               <option value="" disabled selected>ขนาดช่อดอกไม้</option>
@@ -127,7 +128,7 @@
               class="form-control"
               id="flowervase"
               name="sellist6"
-              style="display: none"
+              style="display: none;margin: 10px"
               onchange="topictype()"
             >
               <option value="" disabled selected>รูปแบบแจกัน</option>
@@ -140,7 +141,7 @@
               class="form-control"
               id="wreathpattern"
               name="sellist6"
-              style="display: none"
+              style="display: none ;margin: 10px" 
               onchange="topictype()"
             >
               <option value="" disabled selected>รูปแบบพวงหลีด</option>
@@ -153,7 +154,7 @@
               class="form-control"
               id="flowers"
               name="sellist6"
-              style="display: none"
+              style="display: none;margin: 10px"
               onchange="topictype()"
             >
               <option value="" disabled selected>เลือกดอกไม้</option>
@@ -165,16 +166,24 @@
               <option value="ทั้งหมด">ทั้งหมด</option>
             </select>
             <br />
-
+            
             <button
-              type="button"
-              class="btn btn-primary"
-              onclick="sendProducts()"
+              onclick="sendMsg()"
             >
               คลิกส่งข้อมูลสินค้า
             </button>
           </div>
         </form>
+        
+      </div>
+
+      <br/><br/><br/>
+      <div id="footer" class="center-align text-center">
+        <p>
+          ร้านดอกไม้สบันงานยินดีให้บริการ 
+          <br />
+          โทร. 02-9185839
+        </p>
       </div>
     </div>
 
@@ -222,7 +231,7 @@
       console.log("Hello World!");
     </script>
 
-    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <!-- <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> -->
 
     <script>
       async function topictype() {
@@ -305,48 +314,7 @@
           document.getElementById("flowers").style.display = "none";
         }
       }
-      async function sendProducts() {
-        if (
-          liff.getContext().type !== "none" &&
-          liff.getContext().type !== "external"
-        ) {
-          await liff.sendMessages([
-            {
-              type: "text",
-              text: "รายการสินค้าตามที่เลือกของ LIFF มีดังนี้ค่ะ",
-            },
-            {
-              type: "template",
-              altText: "this is an image carousel template",
-              template: {
-                type: "image_carousel",
-                columns: [
-                  {
-                    imageUrl:
-                      "https://cdn.pixabay.com/photo/2016/11/22/22/20/rose-1850903_960_720.jpg",
-                    action: {
-                      type: "message",
-                      label: "L11",
-                      text: "L11",
-                    },
-                  },
-                  {
-                    imageUrl:
-                      "https://www.teahub.io/photos/full/129-1292320_floribunda.jpg",
-                    action: {
-                      type: "message",
-                      label: "L12",
-                      text: "L12",
-                    },
-                  },
-                ],
-              },
-            },
-          ]);
-          alert("รายการสินค้าส่งไปในห้องแชทแล้วค่ะ ");
-        }
-        liff.closeWindow();
-      }
+    
 
       function createUniversalLink() {
         const link1 = liff.permanentLink.createUrl();

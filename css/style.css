@@ -1,13 +1,17 @@
-/* button {
+button {
+  background-color: #F2C7D8;
+  color : white;
   display: block;
   width: 100%;
   padding: 8px 0;
-  margin: 8px auto
+  margin: 8px auto;
+  border-radius: 25px;
+   border: 2px solid #ffffff; /* Green */
 }
 
-p {
+/* p {
   border-bottom: 1px dashed #ddd
-}
+} */
 
 #pictureUrl {
   display: block;
@@ -30,5 +34,5 @@ p {
 #accessToken, #utouId {
   display: block;
   overflow: auto
-} */
+}
 

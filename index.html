@@ -66,7 +66,6 @@
               <option value="วันสำคัญ">วันสำคัญ</option>
               <option value="ทั้งหมด">ทั้งหมด</option>
             </select>
-            <br />
             <select
               class="form-control"
               id="flowerarrangement"
@@ -80,7 +79,7 @@
               <option value="พวงหลีด">พวงหลีด</option>
               <option value="ทั้งหมด">ทั้งหมด</option>
             </select>
-            <br />
+
             <select
               class="form-control"
               id="flowercolor"
@@ -95,7 +94,7 @@
               <option value="สีชมพู">สีชมพู</option>
               <option value="ทั้งหมด">ทั้งหมด</option>
             </select>
-            <br />
+
             <select
               class="form-control"
               id="flowermeaning"
@@ -109,7 +108,7 @@
               <option value="ความหวัง">ความหวัง</option>
               <option value="ทั้งหมด">ทั้งหมด</option>
             </select>
-            <br />
+ 
             <select
               class="form-control"
               id="bigday"
@@ -124,7 +123,7 @@
               <option value="งานศพ">งานศพ</option>
               <option value="ทั้งหมด">ทั้งหมด</option>
             </select>
-            <br />
+
             <select
               class="form-control"
               id="bouquetsize"
@@ -138,7 +137,7 @@
               <option value="ใหญ่">ใหญ่</option>
               <option value="ทั้งหมด">ทั้งหมด</option>
             </select>
-            <br />
+
             <select
               class="form-control"
               id="flowervase"
@@ -151,7 +150,7 @@
               <option value="สีดอกไม้">กลม</option>
               <option value="วันสำคัญ">ทั้งหมด</option>
             </select>
-            <br />
+
             <select
               class="form-control"
               id="wreathpattern"
@@ -164,7 +163,7 @@
               <option value="สีดอกไม้">เหลี่ยม</option>
               <option value="วันสำคัญ">ทั้งหมด</option>
             </select>
-            <br />
+
             <select
               class="form-control"
               id="flowers"
@@ -182,10 +181,13 @@
             </select>
             <br />
 
-            <button type="button" class="btn btn-primary"  onclick=" shareProducts()">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="shareProducts()"
+            >
               คลิกส่งข้อมูลสินค้า
             </button>
-
           </div>
         </form>
       </div>
@@ -319,12 +321,45 @@
         }
       }
       async function shareProducts() {
-        await liff.shareTargetPicker([
-          {
-            type: "text",
-            text: topice,
-          },
-        ]);
+        if (
+          liff.getContext().type !== "none" &&
+          liff.getContext().type !== "external"
+        ) {
+          await liff.sendMessages([
+            {
+              type: "text",
+              text: "รายการสินค้าตามที่เลือกของ LIFF มีดังนี้ค่ะ",
+            },
+            {
+              type: "template",
+              altText: "this is an image carousel template",
+              template: {
+                type: "image_carousel",
+                columns: [
+                  {
+                    imageUrl:
+                      "https://cdn.pixabay.com/photo/2016/11/22/22/20/rose-1850903_960_720.jpg",
+                    action: {
+                      type: "message",
+                      label: "L11",
+                      text: "L11",
+                    },
+                  },
+                  {
+                    imageUrl:
+                      "https://www.teahub.io/photos/full/129-1292320_floribunda.jpg",
+                    action: {
+                      type: "message",
+                      label: "L12",
+                      text: "L12",
+                    },
+                  },
+                ],
+              },
+            },
+          ]);
+          alert("รายการสินค้าส่งไปในห้องแชทแล้วค่ะ ");
+        }
         liff.closeWindow();
       }
 
@@ -341,7 +376,7 @@
         await liff.shareTargetPicker([
           {
             type: "text",
-            text: "This message waas sent by ShareTargetPicker"
+            text: "This message waas sent by ShareTargetPicker",
           },
         ]);
         liff.closeWindow();

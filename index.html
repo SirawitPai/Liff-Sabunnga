@@ -14,21 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    /> -->
-
     <title>LIFF Sabunnga</title>
     <link rel="stylesheet" href="css/style.css" media="all" />
   </head>
@@ -184,7 +169,7 @@
             <button
               type="button"
               class="btn btn-primary"
-              onclick="shareProducts()"
+              onclick="sendProducts()"
             >
               คลิกส่งข้อมูลสินค้า
             </button>
@@ -223,7 +208,7 @@
           >Link to Path</a
         >
       </p>
-      <button id="btnMsg1" onclick="shareProducts()">รายการสินค้า</button>
+      <button id="btnMsg1" onclick="sendProducts()">รายการสินค้า</button>
       <button id="btnMsg" onclick="sendMsg()">Send Message</button>
       <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
       <button onclick="openWindow()">Open Window</button>
@@ -320,7 +305,7 @@
           document.getElementById("flowers").style.display = "none";
         }
       }
-      async function shareProducts() {
+      async function sendProducts() {
         if (
           liff.getContext().type !== "none" &&
           liff.getContext().type !== "external"
@@ -424,10 +409,10 @@
               text: "สวัสดีครับการแชร์ข้อความ",
             },
             {
-              type: "sticker",
-              packageId: "11537",
-              stickerId: "52002735",
-            },
+  "type": "image",
+  "originalContentUrl": "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
+  "previewImageUrl": "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg"
+},
           ]);
           alert("Message Sent");
         }

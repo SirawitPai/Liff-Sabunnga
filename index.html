@@ -186,11 +186,11 @@
       </div>
     </div>
 
-    <script src="js/vconsole.min.js"></script>
+    <!-- <script src="js/vconsole.min.js"></script>
     <script>
       var vConsole = new VConsole();
       console.log("Hello World!");
-    </script>
+    </script> -->
 
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
@@ -281,7 +281,7 @@
         await liff.shareTargetPicker([
           {
             type: "text",
-            text: "This message waas sent by ShareTargetPicker",
+            text: "สวัสดีค่ะ ร้านดอกไม้สบันงายินดีให้บริการ",
           },
         ]);
         liff.closeWindow();
@@ -322,8 +322,6 @@
         }
         liff.closeWindow();
       }
-
-
 
       async function main() {
         liff.ready.then(() => {

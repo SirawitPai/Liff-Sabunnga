@@ -187,7 +187,7 @@
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
     <script>
-      const textkey  = "aaasd";
+      var textkey  = "";
 
       async function topictype() {
         const topice = document.getElementById("topic").value;
@@ -207,23 +207,25 @@
 
             if (bouquetsize == "" || bouquetsize == "ทั้งหมด") {
               document.getElementById("flowers").style.display = "none";
+              textkey = "ช่อดอกไม้";
             } else {
               document.getElementById("flowers").style.display = "block";
             }
-
             document.getElementById("flowervase").style.display = "none";
             document.getElementById("wreathpattern").style.display = "none";
+
           } else if (flowerarrangement == "แจกัน") {
             document.getElementById("flowervase").style.display = "block";
-
+            textkey = "แจกัน";
             document.getElementById("wreathpattern").style.display = "none";
             document.getElementById("bouquetsize").style.display = "none";
           } else if (flowerarrangement == "พวงหลีด") {
             document.getElementById("wreathpattern").style.display = "block";
-
+            textkey = "พวงหลีด";
             document.getElementById("flowervase").style.display = "none";
             document.getElementById("bouquetsize").style.display = "none";
           } else {
+            textkey = "รูปแบบการจัดทั้งหมด";
             document.getElementById("wreathpattern").style.display = "none";
             document.getElementById("flowervase").style.display = "none";
             document.getElementById("bouquetsize").style.display = "none";
@@ -295,6 +297,7 @@
       }
 
       async function sendMsg() {
+        
         if (
           liff.getContext().type !== "none" &&
           liff.getContext().type !== "external"
@@ -302,21 +305,20 @@
           await liff.sendMessages([
             {
               type: "text",
-              text: textkey,
+              text: `$textkey`,
             },
-            // {
-            //   type: "image",
-            //   originalContentUrl:
-            //     "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
-            //   previewImageUrl:
-            //     "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
-            // },
+            {
+              type: "image",
+              originalContentUrl:
+                "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
+              previewImageUrl:
+                "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
+            },
           ]);
           alert("Message Sent");
         }
         liff.closeWindow();
       }
-
       async function main() {
         liff.ready.then(() => {
           document.getElementById("isLoggedIn").append(liff.isLoggedIn());
@@ -328,8 +330,6 @@
         });
         await liff.init({ liffId: "1656033600-Bwm23aQn" });
       }
-      console.log("Paai");
-
       main();
     </script>
   </body>

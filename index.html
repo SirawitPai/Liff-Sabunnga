@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -28,8 +27,7 @@
       </div>
 
       <div class="row">
-        <form id="carForm" class="col s12">
-          <div class="form-group">
+
             <label for="email">หัวข้อการคัดสินค้าดอกไม้:</label>
             <select
               class="form-control"
@@ -163,6 +161,7 @@
             <br />
             
             <button
+            id="btnShareflower"
               onclick="sendMsg()"
             >
               คลิกส่งข้อมูลสินค้า
@@ -171,9 +170,6 @@
             <button id="btnShare" onclick="shareMsg()">แนะนำบอทให้เพื่อน</button>
             <br/>
             <button id="btnClose" onclick="Closed()">Close</button>
-          </div>
-        </form>
-        
       </div>
 
       <br/><br/><br/>
@@ -278,6 +274,7 @@
     
 
       async function shareMsg() {
+        
         await liff.shareTargetPicker([
           {
             type: "text",
@@ -334,6 +331,8 @@
         });
         await liff.init({ liffId: "1656033600-Bwm23aQn" });
       }
+      console.log("Paai");
+      
       main();
     </script>
   </body>

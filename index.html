@@ -21,174 +21,168 @@
     <div class="container">
       <div class="row">
         <div class="col s12 text-center">
-          <h4>กรุณาเลือกหัวข้อในการแสดงรายการสินค้าดอกไม้</h4>
+          <h6>กรุณาเลือกหัวข้อในการแสดงรายการสินค้าดอกไม้</h6>
           <p>ในการเลือกบอทจะช่วยให้่สินค้าตรงตามที่ลูกค้าเลือกมากที่สุด</p>
         </div>
       </div>
 
       <div class="row">
-<div class="form-group">
-            <label for="email" style="margin: 10px">หัวข้อการคัดสินค้าดอกไม้:</label>
-            <select
-              class="form-control"
-              id="topic"
-              name="sellist1"
-              style="margin: 10px"
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>
-                กรุณาหัวข้อการคัดดอกไม้
-              </option>
-              <option value="รูปแบบการจัด">รูปแบบการจัด</option>
-              <option value="สีดอกไม้">สีดอกไม้</option>
-              <option value="ความหมายดอกไม้">ความหมายดอกไม้</option>
-              <option value="วันสำคัญ">วันสำคัญ</option>
-              <option value="ทั้งหมด">ทั้งหมด</option>
-            </select>
-            <select
-              class="form-control"
-              id="flowerarrangement"
-              name="sellist2"
-              style="display: none ;margin: 10px"
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>รูปแบบการจัดดอกไม้</option>
-              <option value="ช่อดอกไม้">ช่อดอกไม้</option>
-              <option value="แจกัน">แจกัน</option>
-              <option value="พวงหลีด">พวงหลีด</option>
-              <option value="ทั้งหมด">ทั้งหมด</option>
-            </select>
+        <label for="email" style="margin: 10px"
+          >หัวข้อการคัดสินค้าดอกไม้:</label
+        >
+        <select
+          class="form-control"
+          id="topic"
+          name="sellist1"
+          style="margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>กรุณาหัวข้อการคัดดอกไม้</option>
+          <option value="รูปแบบการจัด">รูปแบบการจัด</option>
+          <option value="สีดอกไม้">สีดอกไม้</option>
+          <option value="ความหมายดอกไม้">ความหมายดอกไม้</option>
+          <option value="วันสำคัญ">วันสำคัญ</option>
+          <option value="ทั้งหมด">ทั้งหมด</option>
+        </select>
+        <select
+          class="form-control"
+          id="flowerarrangement"
+          name="sellist2"
+          style="display: none; margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>รูปแบบการจัดดอกไม้</option>
+          <option value="ช่อดอกไม้">ช่อดอกไม้</option>
+          <option value="แจกัน">แจกัน</option>
+          <option value="พวงหลีด">พวงหลีด</option>
+          <option value="ทั้งหมด">ทั้งหมด</option>
+        </select>
 
-            <select
-              class="form-control"
-              id="flowercolor"
-              name="sellist3"
-              style="display: none;margin: 10px"
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>เลือกสีดอกไม้</option>
-              <option value="สีขาว">สีขาว</option>
-              <option value="สีแดง">สีแดง</option>
-              <option value="สีเหลือง">สีเหลือง</option>
-              <option value="สีชมพู">สีชมพู</option>
-              <option value="ทั้งหมด">ทั้งหมด</option>
-            </select>
+        <select
+          class="form-control"
+          id="flowercolor"
+          name="sellist3"
+          style="display: none; margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>เลือกสีดอกไม้</option>
+          <option value="สีขาว">สีขาว</option>
+          <option value="สีแดง">สีแดง</option>
+          <option value="สีเหลือง">สีเหลือง</option>
+          <option value="สีชมพู">สีชมพู</option>
+          <option value="ทั้งหมด">ทั้งหมด</option>
+        </select>
 
-            <select
-              class="form-control"
-              id="flowermeaning"
-              name="sellist4"
-              style="display: none;margin: 10px"
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>เลือกความหมายดอกไม้</option>
-              <option value="ความรัก">ความรัก</option>
-              <option value="คำยินดี">คำยินดี</option>
-              <option value="ความหวัง">ความหวัง</option>
-              <option value="ทั้งหมด">ทั้งหมด</option>
-            </select>
- 
-            <select
-              class="form-control"
-              id="bigday"
-              name="sellist5"
-              style="display: none;margin: 10px"
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>เลือกวันสำคัญ</option>
-              <option value="วันเกิด">วันเกิด</option>
-              <option value="วันครบรอบ">วันครบรอบ</option>
-              <option value="วันรับปริณญา">วันรับปริณญา</option>
-              <option value="งานศพ">งานศพ</option>
-              <option value="ทั้งหมด">ทั้งหมด</option>
-            </select>
+        <select
+          class="form-control"
+          id="flowermeaning"
+          name="sellist4"
+          style="display: none; margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>เลือกความหมายดอกไม้</option>
+          <option value="ความรัก">ความรัก</option>
+          <option value="คำยินดี">คำยินดี</option>
+          <option value="ความหวัง">ความหวัง</option>
+          <option value="ทั้งหมด">ทั้งหมด</option>
+        </select>
 
-            <select
-              class="form-control"
-              id="bouquetsize"
-              name="sellist6"
-              style="display: none;margin: 10px"
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>ขนาดช่อดอกไม้</option>
-              <option value="เล็ก">เล็ก</option>
-              <option value="กลาง">กลาง</option>
-              <option value="ใหญ่">ใหญ่</option>
-              <option value="ทั้งหมด">ทั้งหมด</option>
-            </select>
+        <select
+          class="form-control"
+          id="bigday"
+          name="sellist5"
+          style="display: none; margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>เลือกวันสำคัญ</option>
+          <option value="วันเกิด">วันเกิด</option>
+          <option value="วันครบรอบ">วันครบรอบ</option>
+          <option value="วันรับปริณญา">วันรับปริณญา</option>
+          <option value="งานศพ">งานศพ</option>
+          <option value="ทั้งหมด">ทั้งหมด</option>
+        </select>
 
-            <select
-              class="form-control"
-              id="flowervase"
-              name="sellist6"
-              style="display: none;margin: 10px"
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>รูปแบบแจกัน</option>
-              <option value="รูปแบบการจัด">ยาว</option>
-              <option value="สีดอกไม้">กลม</option>
-              <option value="วันสำคัญ">ทั้งหมด</option>
-            </select>
+        <select
+          class="form-control"
+          id="bouquetsize"
+          name="sellist6"
+          style="display: none; margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>ขนาดช่อดอกไม้</option>
+          <option value="เล็ก">เล็ก</option>
+          <option value="กลาง">กลาง</option>
+          <option value="ใหญ่">ใหญ่</option>
+          <option value="ทั้งหมด">ทั้งหมด</option>
+        </select>
 
-            <select
-              class="form-control"
-              id="wreathpattern"
-              name="sellist6"
-              style="display: none ;margin: 10px" 
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>รูปแบบพวงหลีด</option>
-              <option value="รูปแบบการจัด">กลม</option>
-              <option value="สีดอกไม้">เหลี่ยม</option>
-              <option value="วันสำคัญ">ทั้งหมด</option>
-            </select>
+        <select
+          class="form-control"
+          id="flowervase"
+          name="sellist6"
+          style="display: none; margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>รูปแบบแจกัน</option>
+          <option value="รูปแบบการจัด">ยาว</option>
+          <option value="สีดอกไม้">กลม</option>
+          <option value="วันสำคัญ">ทั้งหมด</option>
+        </select>
 
-            <select
-              class="form-control"
-              id="flowers"
-              name="sellist6"
-              style="display: none;margin: 10px"
-              onchange="topictype()"
-            >
-              <option value="" disabled selected>เลือกดอกไม้</option>
-              <option value="กุหลาบ">กุหลาบ</option>
-              <option value="ดอกคัตเตอร์">ดอกคัตเตอร์</option>
-              <option value="ดอกคาร์เนชั่น">ดอกคาร์เนชั่น</option>
-              <option value="ดอกทานตะวัน">ดอกทานตะวัน</option>
-              <option value="ดอกทิวลิป">ดอกทิวลิป</option>
-              <option value="ทั้งหมด">ทั้งหมด</option>
-            </select>
-            <br />
-            
-            <button
-            id="btnShareflower"
-              onclick="sendMsg()"
-            >
-              คลิกส่งข้อมูลสินค้า
-            </button>
-            <br/>
-            <button id="btnShare" onclick="shareMsg()">แนะนำบอทให้เพื่อน</button>
-            <br/>
-            <button id="btnClose" onclick="Closed()">Close</button>
-            </div>
+        <select
+          class="form-control"
+          id="wreathpattern"
+          name="sellist6"
+          style="display: none; margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>รูปแบบพวงหลีด</option>
+          <option value="รูปแบบการจัด">กลม</option>
+          <option value="สีดอกไม้">เหลี่ยม</option>
+          <option value="วันสำคัญ">ทั้งหมด</option>
+        </select>
+
+        <select
+          class="form-control"
+          id="flowers"
+          name="sellist6"
+          style="display: none; margin: 10px"
+          onchange="topictype()"
+        >
+          <option value="" disabled selected>เลือกดอกไม้</option>
+          <option value="กุหลาบ">กุหลาบ</option>
+          <option value="ดอกคัตเตอร์">ดอกคัตเตอร์</option>
+          <option value="ดอกคาร์เนชั่น">ดอกคาร์เนชั่น</option>
+          <option value="ดอกทานตะวัน">ดอกทานตะวัน</option>
+          <option value="ดอกทิวลิป">ดอกทิวลิป</option>
+          <option value="ทั้งหมด">ทั้งหมด</option>
+        </select>
+        <br />
+
+        <button id="btnShareflower" onclick="sendMsg()">
+          คลิกส่งข้อมูลสินค้า
+        </button>
+        <br />
+        <button id="btnShare" onclick="shareMsg()">แนะนำบอทให้เพื่อน</button>
+        <br />
+        <button id="btnClose" onclick="Closed()">Close</button>
       </div>
 
-      <br/><br/><br/>
+      <br /><br /><br />
       <div id="footer" class="center-align text-center">
         <p>
-          ร้านดอกไม้สบันงานยินดีให้บริการ 
+          ร้านดอกไม้สบันงานยินดีให้บริการ
           <br />
           โทร. 02-9185839
         </p>
       </div>
-
     </div>
 
-    <script src="js/vconsole.min.js"></script>
+    <!-- <script src="js/vconsole.min.js"></script>
     <script>
       var vConsole = new VConsole();
       console.log("Hello World!");
-    </script>
+    </script> -->
 
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
@@ -273,10 +267,8 @@
           document.getElementById("flowers").style.display = "none";
         }
       }
-    
 
       async function shareMsg() {
-        
         await liff.shareTargetPicker([
           {
             type: "text",
@@ -285,7 +277,6 @@
         ]);
         liff.closeWindow();
       }
-
 
       function Closed() {
         liff.closeWindow();
@@ -312,10 +303,12 @@
               text: "สวัสดีครับการแชร์ข้อความ",
             },
             {
-  "type": "image",
-  "originalContentUrl": "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
-  "previewImageUrl": "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg"
-},
+              type: "image",
+              originalContentUrl:
+                "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
+              previewImageUrl:
+                "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
+            },
           ]);
           alert("Message Sent");
         }
@@ -334,7 +327,7 @@
         await liff.init({ liffId: "1656033600-Bwm23aQn" });
       }
       console.log("Paai");
-      
+
       main();
     </script>
   </body>

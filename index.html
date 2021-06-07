@@ -168,7 +168,7 @@
         <button id="btnClose" onclick="Closed()">Close</button>
       </div>
 
-      <br /><br /><br />
+      <br />
       <div id="footer" class="center-align text-center">
         <p>
           ร้านดอกไม้สบันงานยินดีให้บริการ
@@ -187,6 +187,8 @@
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
     <script>
+      const textkey  = "aaasd";
+
       async function topictype() {
         const topice = document.getElementById("topic").value;
         if (topice == "รูปแบบการจัด") {
@@ -300,15 +302,15 @@
           await liff.sendMessages([
             {
               type: "text",
-              text: "สวัสดีครับการแชร์ข้อความ",
+              text: textkey,
             },
-            {
-              type: "image",
-              originalContentUrl:
-                "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
-              previewImageUrl:
-                "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
-            },
+            // {
+            //   type: "image",
+            //   originalContentUrl:
+            //     "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
+            //   previewImageUrl:
+            //     "https://www.emporium.co.th/wp-content/uploads/2020/02/20200204-Web-Cover-01-1.jpg",
+            // },
           ]);
           alert("Message Sent");
         }

@@ -187,7 +187,7 @@
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
     <script>
-      var textkey  = "";
+      var keyword  = "";
 
       async function topictype() {
         const topice = document.getElementById("topic").value;
@@ -207,7 +207,7 @@
 
             if (bouquetsize == "" || bouquetsize == "ทั้งหมด") {
               document.getElementById("flowers").style.display = "none";
-              textkey = "ช่อดอกไม้";
+              keyword = "ช่อดอกไม้";
             } else {
               document.getElementById("flowers").style.display = "block";
             }
@@ -216,16 +216,16 @@
 
           } else if (flowerarrangement == "แจกัน") {
             document.getElementById("flowervase").style.display = "block";
-            textkey = "แจกัน";
+            keyword = "แจกัน";
             document.getElementById("wreathpattern").style.display = "none";
             document.getElementById("bouquetsize").style.display = "none";
           } else if (flowerarrangement == "พวงหลีด") {
             document.getElementById("wreathpattern").style.display = "block";
-            textkey = "พวงหลีด";
+            keyword = "พวงหลีด";
             document.getElementById("flowervase").style.display = "none";
             document.getElementById("bouquetsize").style.display = "none";
           } else {
-            textkey = "รูปแบบการจัดทั้งหมด";
+            keyword = "รูปแบบการจัดทั้งหมด";
             document.getElementById("wreathpattern").style.display = "none";
             document.getElementById("flowervase").style.display = "none";
             document.getElementById("bouquetsize").style.display = "none";
@@ -297,7 +297,6 @@
       }
 
       async function sendMsg() {
-        
         if (
           liff.getContext().type !== "none" &&
           liff.getContext().type !== "external"
@@ -305,7 +304,7 @@
           await liff.sendMessages([
             {
               type: "text",
-              text: `$textkey`,
+              text: keyword,
             },
             {
               type: "image",

@@ -38,10 +38,10 @@
           onchange="topictype()"
         >
           <option value="" disabled selected>กรุณาหัวข้อการคัดดอกไม้</option>
-          <option value="รูปแบบการจัด">รูปแบบการจัด</option>
-          <option value="สีดอกไม้">สีดอกไม้</option>
-          <option value="ดอกไม้">ดอกไม้</option>
-          <option value="วันสำคัญ">วันสำคัญ</option>
+          <option value="รูปแบบการจัดดอกไม้">รูปแบบการจัดดอกไม้</option>
+          <option value="สีของดอกไม้">สีของดอกไม้</option>
+          <option value="ชนิดดอกไม้">ชนิดดอกไม้</option>
+          <option value="ดอกไม้สำหรับวันสำคัญ">ดอกไม้สำหรับวันสำคัญ</option>
           <option value="สินค้าทั้งหมด">ทั้งหมด</option>
         </select>
         <select
@@ -54,7 +54,7 @@
           <option value="" disabled selected>รูปแบบการจัดดอกไม้</option>
           <option value="ช่อดอกไม้">ช่อดอกไม้</option>
           <option value="แจกัน">แจกัน</option>
-          <option value="พวงหลีด">พวงหลีด</option>
+          <option value="พวงหรีด">พวงหรีด</option>
           <option value="ทั้งหมด">ทั้งหมด</option>
         </select>
 
@@ -65,12 +65,12 @@
           style="display: none; margin: 10px"
           onchange="topictype()"
         >
-          <option value="" disabled selected>เลือกสีดอกไม้</option>
-          <option value="สีขาว">สีขาว</option>
-          <option value="สีชมพู">สีชมพู</option>
-          <option value="สีเหลือง">สีเหลือง</option>
-          <option value="สีแดง">สีแดง</option>
-          <option value="สีม่วง">สีม่วง</option>
+          <option value="" disabled selected>เลือกสีของดอกไม้</option>
+          <option value="ดอกไม้สีขาว">ดอกไม้สีขาว</option>
+          <option value="ดอกไม้สีชมพู">ดอกไม้สีชมพู</option>
+          <option value="ดอกไม้สีเหลือง">ดอกไม้สีเหลือง</option>
+          <option value="ดอกไม้สีแดง">ดอกไม้สีแดง</option>
+          <option value="ดอกไม้สีม่วง">ดอกไม้สีม่วง</option>
           <option value="ทั้งหมด">ทั้งหมด</option>
         </select>
 
@@ -81,7 +81,7 @@
           style="display: none; margin: 10px"
           onchange="topictype()"
         >
-          <option value="" disabled selected>เลือกวันสำคัญ</option>
+          <option value="" disabled selected>เลือกดอกไม้สำหรับวันสำคัญ</option>
           <option value="วันเกิด">วันเกิด</option>
           <option value="สำหรับขอโทษ">สำหรับขอโทษ</option>
           <option value="วันครบรอบ">วันครบรอบ</option>
@@ -99,9 +99,9 @@
           onchange="topictype()"
         >
           <option value="" disabled selected>ขนาดช่อดอกไม้</option>
-          <option value="ช่อเล็ก">ช่อเล็ก</option>
-          <option value="ช่อกลาง">ช่อกลาง</option>
-          <option value="ช่อใหญ่">ช่อใหญ่</option>
+          <option value="ช่อขนาดเล็ก">ช่อขนาดเล็ก</option>
+          <option value="ช่อขนาดกลาง">ช่อขนาดกลาง</option>
+          <option value="ช่อขนาดใหญ่">ช่อขนาดใหญ่</option>
           <option value="ทั้งหมด">ทั้งหมด</option>
         </select>
 
@@ -112,11 +112,12 @@
           style="display: none; margin: 10px"
           onchange="topictype()"
         >
-          <option value="" disabled selected>เลือกดอกไม้</option>
+          <option value="" disabled selected>เลือกชนิดดอกไม้</option>
           <option value="กุหลาบ">กุหลาบ</option>
           <option value="ดอกทานตะวัน">ดอกทานตะวัน</option>
           <option value="ดอกยิปโซ">ดอกยิปโซ</option>
           <option value="ดอกทิวลิป">ดอกทิวลิป</option>
+          <option value="ดอกคาร์เนชั่น">ดอกคาร์เนชั่น</option>
           <option value="ทั้งหมด">ทั้งหมด</option>
         </select>
         <br />
@@ -152,7 +153,7 @@
 
       async function topictype() {
         const topice = document.getElementById("topic").value;
-        if (topice == "รูปแบบการจัด") {
+        if (topice == "รูปแบบการจัดดอกไม้") {
           document.getElementById("flowerarrangement").style.display = "block";
 
           document.getElementById("flowercolor").style.display = "none";
@@ -164,39 +165,39 @@
             document.getElementById("bouquetsize").style.display = "block";
             var bouquetsize = document.getElementById("bouquetsize").value;
 
-            if (bouquetsize  == "ช่อเล็ก") {
-              keyword = "ช่อเล็ก";
-            } else  if (bouquetsize  == "ช่อกลาง") {
-              keyword = "ช่อกลาง";
-            }else  if (bouquetsize  == "ช่อใหญ่") {
-              keyword = "ช่อใหญ่";
+            if (bouquetsize  == "ช่อขนาดเล็ก") {
+              keyword = "ช่อขนาดเล็ก";
+            } else  if (bouquetsize  == "ช่อขนาดกลาง") {
+              keyword = "ช่อขนาดกลาง";
+            }else  if (bouquetsize  == "ช่อขนาดใหญ่") {
+              keyword = "ช่อขนาดใหญ่";
             }else{
               keyword = "ช่อดอกไม้ทั้งหมด";
             }
           } else if (flowerarrangement == "แจกัน") {
             keyword = "แจกัน";
             document.getElementById("bouquetsize").style.display = "none";
-          } else if (flowerarrangement == "พวงหลีด") {
-            keyword = "พวงหลีด";
+          } else if (flowerarrangement == "พวงหรีด") {
+            keyword = "พวงหรีด";
             document.getElementById("bouquetsize").style.display = "none";
           } else {
             keyword = "รูปแบบการจัดทั้งหมด";
             document.getElementById("bouquetsize").style.display = "none";
           }
 
-        } else if (topice == "สีดอกไม้") {
+        } else if (topice == "สีของดอกไม้") {
           document.getElementById("flowercolor").style.display = "block";
           var flowercolor = document.getElementById("flowercolor").value;
-          if(flowercolor == "สีขาว"){
-             keyword = "สีขาว";
-          } else if(flowercolor == "สีชมพู"){
-            keyword = "สีชมพู";
-          }else if(flowercolor == "สีเหลือง"){
-            keyword = "สีเหลือง";
-          }else if(flowercolor == "สีแดง"){
-            keyword = "สีแดง";
-          }else if(flowercolor == "สีม่วง"){
-            keyword = "สีม่วง";
+          if(flowercolor == "ดอกไม้สีขาว"){
+             keyword = "ดอกไม้สีขาว";
+          } else if(flowercolor == "ดอกไม้สีชมพู"){
+            keyword = "ดอกไม้สีชมพู";
+          }else if(flowercolor == "ดอกไม้สีเหลือง"){
+            keyword = "ดอกไม้สีเหลือง";
+          }else if(flowercolor == "ดอกไม้สีแดง"){
+            keyword = "ดอกไม้สีแดง";
+          }else if(flowercolor == "ดอกไม้สีม่วง"){
+            keyword = "ดอกไม้สีม่วง";
           }else {
             keyword = "สีดอกไม้ทั้งหมด";
           }
@@ -205,7 +206,7 @@
           document.getElementById("bouquetsize").style.display = "none";
           document.getElementById("flowers").style.display = "none";
 
-        } else if (topice == "ดอกไม้") {
+        } else if (topice == "ชนิดดอกไม้") {
           document.getElementById("flowers").style.display = "block";
           var flowers = document.getElementById("flowers").value;
           if(flowers == "กุหลาบ"){
@@ -216,6 +217,8 @@
             keyword = "ดอกยิปโซ";
           }else if(flowers == "ดอกทิวลิป"){
             keyword = "ดอกทิวลิป";
+          }else if(flowers == "ดอกคาร์เนชั่น"){
+            keyword = "ดอกคาร์เนชั่น";
           }else {
             keyword = "ดอกไม้ทั้งหมด";
           }
@@ -224,7 +227,7 @@
           document.getElementById("flowercolor").style.display = "none";
           document.getElementById("bigday").style.display = "none";
           document.getElementById("bouquetsize").style.display = "none";
-        } else if (topice == "วันสำคัญ") {
+        } else if (topice == "ดอกไม้สำหรับวันสำคัญ") {
           document.getElementById("bigday").style.display = "block";
           var bigday = document.getElementById("bigday").value;
           if(bigday == "วันเกิด"){
@@ -296,7 +299,7 @@
               text: keyword,
             },
           ]);
-          alert("Message Sent");
+          // alert("Message Sent");
         }
         liff.closeWindow();
         }
